@@ -2,7 +2,7 @@
 
 {% block javascript %}
   <script>
-    $("#id_username").change(function () {
+    $("#id_username").on("input",function () {
       var username = $(this).val();
 
       $.ajax({

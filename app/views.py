@@ -9,6 +9,7 @@ def validate_username(request):
     data = {
         'is_taken': User.objects.filter(username__iexact=username).exists()
     }
+    print(data)
     return JsonResponse(data)
 
 def success(request):
